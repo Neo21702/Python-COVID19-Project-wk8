@@ -2,13 +2,13 @@
 
 ## Project Overview
 
-This project is a comprehensive data analysis notebook that tracks global COVID-19 trends using the [Our World in Data COVID-19 dataset](https://ourworldindata.org/covid-cases). The notebook demonstrates data cleaning, exploratory data analysis (EDA), visualization, and insight generation for cases, deaths, and vaccinations across countries and continents.
+This project is a Jupyter Notebook that analyzes and visualizes global COVID-19 trends using the [Our World in Data COVID-19 dataset](https://ourworldindata.org/covid-cases). The notebook demonstrates data loading, cleaning, exploratory data analysis (EDA), and visualization for cases, deaths, and vaccinations across selected countries.
 
 ## Objectives
 
 - Import and clean COVID-19 global data
 - Analyze time trends (cases, deaths, vaccinations)
-- Compare metrics across countries and continents
+- Compare metrics across countries/regions
 - Visualize trends with charts and summary tables
 - Communicate findings in a Jupyter Notebook
 
@@ -19,52 +19,49 @@ This project is a comprehensive data analysis notebook that tracks global COVID-
 
 ## Tools Used
 
-- Python (pandas, matplotlib, seaborn)
+- Python (pandas, matplotlib, seaborn, plotly)
 - Jupyter Notebook (or VS Code with Jupyter extension)
 
 ## Project Workflow
 
 1. **Data Loading & Exploration**
-   - Load the dataset and display columns, preview data, and check for missing values.
+   - Load the dataset, display columns, preview data, and check for missing values.
 
 2. **Data Cleaning**
-   - Handle missing values by filling with zeros or dropping as appropriate.
-   - Filter for countries or continents of interest.
-   - Convert date columns to datetime format.
+   - Filter for countries of interest (e.g., Kenya, USA, India)
+   - Drop rows with missing critical values
+   - Convert date columns to datetime format
+   - Fill or interpolate missing numeric values
 
 3. **Exploratory Data Analysis (EDA)**
-   - Calculate and visualize total cases and deaths by continent.
-   - Compute and display case fatality rates (CFR) for countries and continents.
-   - Analyze trends in cases and deaths over time for selected countries (e.g., United States, India, Kenya).
-   - Generate summary reports and statistics.
+   - Plot total cases and deaths over time for selected countries
+   - Compare daily new cases between countries
+   - Calculate and visualize death rates
 
-4. **Visualization**
-   - Bar plots for total cases and deaths by continent.
-   - Line plots for total cases and deaths over time by country.
-   - Boxplots and other charts for comparing new cases and fatality rates.
+4. **Vaccination Analysis**
+   - Plot cumulative vaccinations over time
+   - Compare percentage of population vaccinated
 
-5. **Advanced Analysis**
-   - Calculate average case fatality rates by continent.
-   - Clean and handle infinite or missing values in calculated metrics.
-   - Optionally, provide interactive dashboards (e.g., with Streamlit).
+5. **(Optional) Choropleth Map**
+   - Visualize global case density or vaccination rates on a world map
 
-6. **Reporting**
-   - Print and display summary tables and key findings.
-   - Save cleaned and processed datasets for further use.
+6. **Insights & Reporting**
+   - Summarize key findings and patterns using Markdown cells
 
 ## How to Run
 
-1. Ensure `owid-covid-data.csv` is in the project directory.
+1. Place `owid-covid-data.csv` in the project directory.
 2. Open `JupyterNotebook.ipynb` in VS Code or Jupyter.
 3. Run each cell in order to reproduce the analysis and visualizations.
 4. Review the outputs, charts, and summary tables.
 
 ## Example Insights
 
-- The USA, India, and Kenya show distinct trends in total cases and deaths over time.
-- Europe has a notably high average case fatality rate compared to other continents.
-- Data cleaning is essential due to missing and infinite values in real-world datasets.
-- Visualizations help reveal differences in pandemic impact across regions.
+- The USA had the highest total cases and deaths among the selected countries.
+- India experienced a sharp rise in cases during mid-2021.
+- Kenya's vaccination rollout lagged behind the USA and India.
+- Death rates were highest in the early stages of the pandemic for all countries.
+- Vaccination rates increased significantly in the USA compared to Kenya and India.
 
 ## License
 
